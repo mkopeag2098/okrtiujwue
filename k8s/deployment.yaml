@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vndguo
+  name: dnhexg
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: vndguo
+      app: dnhexg
   template:
     metadata:
       labels:
-        app: vndguo
+        app: dnhexg
     spec:
       containers:
-      - image: okteto.dev/vndguo:latest
-        name: vndguo
+      - image: okteto.dev/dnhexg:latest
+        name: dnhexg
         ports:
         - containerPort: 8080
         env:
