@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: huaernmo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: huaernmo
+  template:
+    metadata:
+      labels:
+        app: huaernmo
+    spec:
+      containers:
+      - image: okteto.dev/huaernmo:latest
+        name: huaernmo
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: ProxySite
+          value: "www.plex.tv"
+        - name: Vless_UUID
+          value: "3192a591-b182-4d44-93f6-4eb34490a8e0"
+        - name: Vless_Path
+          value: "/ZE6JHFI"
+        - name: Vmess_UUID
+          value: "3192a591-b182-4d44-93f6-4eb34490a8e0"
+        - name: Vmess_Path
+          value: "/EAXI6G"
+        - name: Share_Path
+          value: "/Share039"
