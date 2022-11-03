@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: vndguo
+  name: dnhexg
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "vndguo"
+  - name: "dnhexg"
     port: 8080
   selector:
-    app: vndguo
+    app: dnhexg
