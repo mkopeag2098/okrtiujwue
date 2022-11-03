@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: huaernmo
+  name: haoset
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: huaernmo
+      app: haoset
   template:
     metadata:
       labels:
-        app: huaernmo
+        app: haoset
     spec:
       containers:
-      - image: okteto.dev/huaernmo:latest
-        name: huaernmo
+      - image: okteto.dev/haoset:latest
+        name: haoset
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: ProxySite
           value: "www.plex.tv"
         - name: Vless_UUID
-          value: "3192a591-b182-4d44-93f6-4eb34490a8e0"
+          value: "c6de7d2e-9e8f-43d4-b7f4-bcd942444030"
         - name: Vless_Path
-          value: "/ZE6JHFI"
+          value: "/c6de7d2e-9e8f-43d4-b7f4-bcd942444030"
         - name: Vmess_UUID
-          value: "3192a591-b182-4d44-93f6-4eb34490a8e0"
+          value: "02d4be4a-4b94-4c4f-8c04-ad1da8e45331"
         - name: Vmess_Path
-          value: "/EAXI6G"
+          value: "/02d4be4a-4b94-4c4f-8c04-ad1da8e45331"
         - name: Share_Path
           value: "/Share039"
