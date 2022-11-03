@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: haoset
+  name: wuoug
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "haoset"
+  - name: "wuoug"
     port: 8080
   selector:
-    app: haoset
+    app: wuoug
