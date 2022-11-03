@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wangpa
+  name: vndguo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wangpa
+      app: vndguo
   template:
     metadata:
       labels:
-        app: wangpa
+        app: vndguo
     spec:
       containers:
-      - image: okteto.dev/wangpa:latest
-        name: wangpa
+      - image: okteto.dev/vndguo:latest
+        name: vndguo
         ports:
         - containerPort: 8080
         env:
