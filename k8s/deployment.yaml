@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: haoset
+  name: wuoug
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: haoset
+      app: wuoug
   template:
     metadata:
       labels:
-        app: haoset
+        app: wuoug
     spec:
       containers:
-      - image: okteto.dev/haoset:latest
-        name: haoset
+      - image: okteto.dev/wuoug:latest
+        name: wuoug
         ports:
         - containerPort: 8080
         env:
